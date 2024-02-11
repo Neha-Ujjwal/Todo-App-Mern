@@ -4,6 +4,7 @@ import { addNewTodo } from "../redux/actions";
 
 function TodoForm() {
   const dispatch = useDispatch();
+
   const [todoTask, setTodoTask] = useState("");
 
   function onFormSubmit(e) {

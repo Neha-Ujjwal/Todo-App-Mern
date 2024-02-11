@@ -18,3 +18,12 @@ export const getAllTodos = () => async (dispatch) => {
     console.log("Error while fetching all Todos", error.message);
   }
 };
+
+export const toggleTodo = (id) => async (dispatch) => {
+  try {
+    const res = await axios.get(`${API_URL}/todos/${id}`);
+    dispatch({ type: "TOGGLE_TODO", payload: res.data });
+  } catch (error) {
+    console.log("Error while fetching all Todos", error.message);
+  }
+};
