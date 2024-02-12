@@ -35,3 +35,26 @@ export const toggleTodoStatus = async (request, response) => {
     return response.status(500).json(error.message);
   }
 };
+
+export const updateTodo = async (request, response) => {
+  try {
+    await Todo.findOneAndUpdate(
+      { _id: request.params.id },
+      { data: request.body.data }
+    );
+    const todo = await Todo.findById(request.params.id);
+
+    return response.status(200).json(todo);
+  } catch (error) {
+    return response.status(500).json(error.message);
+  }
+};
+
+export const deleteTodo = async (request, response) => {
+  try {
+    const todo = await Todo.findByIdAndDelete(request.params.id);
+    return response.status(200).json(todo);
+  } catch (error) {
+    return response.status(500).json(error.message);
+  }
+};

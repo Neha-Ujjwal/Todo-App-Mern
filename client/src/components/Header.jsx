@@ -4,9 +4,7 @@ import "../App.css";
 function Header() {
   return (
     <header>
-      <h1 className="text-[100px] font-bold-200 text-[#2c3e50]">
-        hello
-      </h1>
+      <h1 className="text-[120px]  text-[#2c3e50] m-5">TodoList</h1>
     </header>
   );
 }

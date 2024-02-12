@@ -23,7 +23,7 @@ function TodoForm() {
           placeholder="Enter new todo..."
           value={todoTask}
           onChange={(e) => setTodoTask(e.target.value)}
-          className="text-lg text-[#2c3e50] w-1/2  focus:outline-none border-b border-[#2c3e50] "
+          className="text-lg text-[#2c3e50]  w-1/2  focus:outline-none border-b border-[#2c3e50] "
         />
       </form>
     </>
